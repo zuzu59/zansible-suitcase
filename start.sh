@@ -1,6 +1,6 @@
 #!/bin/bash
 # démarre le suitecase de domq pour faire des tests rapide d'Ansible
-# zf200929.1619
+# zf200929.1708
 
 
 platform_check () {
@@ -18,3 +18,5 @@ platform_check () {
 
 set -e
 platform_check
+
+bash --rcfile <(echo '. ~/.bashrc; unset PROMPT_COMMAND; PS1="SUITCASE, $PS1"') -i
