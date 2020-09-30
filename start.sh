@@ -1,7 +1,6 @@
 #!/bin/bash
 # démarre le suitecase de domq pour faire des tests rapide d'Ansible
-# zf200929.1708
-
+# zf200929.1723
 
 platform_check () {
     if ! test -f ansible-deps-cache/.versions 2>/dev/null; then
