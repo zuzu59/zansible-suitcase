@@ -1,6 +1,6 @@
 #!/bin/bash
 # démarre le suitecase de domq pour faire des tests rapide d'Ansible
-# zf200929.1723
+# zf200929.1723, zf210521.0757
 
 platform_check () {
     if ! test -f ansible-deps-cache/.versions 2>/dev/null; then
@@ -8,7 +8,7 @@ platform_check () {
             SUITCASE_DIR=$PWD/ansible-deps-cache \
             SUITCASE_PIP_EXTRA="bcrypt passlib" \
             SUITCASE_ANSIBLE_REQUIREMENTS=requirements.yml \
-            SUITCASE_NO_KEYBASE=true \
+            SUITCASE_ANSIBLE_VERSION=3.1 \
             bash -x
     fi
     export PATH="$PWD/ansible-deps-cache/bin:$PATH"
