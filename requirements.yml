@@ -1,6 +1,9 @@
-collections:
-  - community.general
-
 roles:
-  - name: nickjj.docker
-  
+- name: nickjj.docker
+- name: epfl_si.ansible_module_openshift
+- name: epfl_si.ansible_module_eyaml
+
+collections:
+- community.general
+- name: epfl_si.actions
+  version: 0.1.0

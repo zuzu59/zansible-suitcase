@@ -1,12 +1,12 @@
 #!/bin/bash
 # démarre le suitecase de domq pour faire des tests rapide d'Ansible
-# zf200929.1723, zf210521.0757
+# zf200929.1723, zf210609.1110
 
 platform_check () {
     if ! test -f ansible-deps-cache/.versions 2>/dev/null; then
         curl https://raw.githubusercontent.com/epfl-si/ansible.suitcase/master/install.sh | \
             SUITCASE_DIR=$PWD/ansible-deps-cache \
-            SUITCASE_PIP_EXTRA="bcrypt passlib" \
+            SUITCASE_PIP_EXTRA="requests bcrypt passlib mitogen==0.2.9" \
             SUITCASE_ANSIBLE_REQUIREMENTS=requirements.yml \
             SUITCASE_ANSIBLE_VERSION=3.1 \
             bash -x
